@@ -15,6 +15,7 @@
     ],
     "sharedGlobals": []
   },
+
   "targetDefaults": {
     "@angular-devkit/build-angular:application": {
       "cache": true,
@@ -42,6 +43,11 @@
           "codeCoverage": true
         }
       }
+    },
+    "@nx/js:tsc": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
     }
   },
   "generators": {
@@ -51,5 +57,8 @@
       "style": "css",
       "unitTestRunner": "jest"
     }
-  }
+  },
+  "plugins": [
+    "./tools/plugins/implicit-libs/src/index.ts"
+  ]
 }
