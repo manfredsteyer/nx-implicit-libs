@@ -15,8 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@demo/implicit-libs": ["tools\\plugins\\implicit-libs\\index.ts"],
-      "@demo/my-lib": ["libs\\my-lib\\index.ts"]
+      "@demo/domain1-ui-lib": ["libs\\domain1\\ui-lib\\index.ts"],
+      "@demo/implicit-libs": ["tools\\plugins\\implicit-libs\\index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
