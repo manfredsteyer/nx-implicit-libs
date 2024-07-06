@@ -38,6 +38,33 @@ module.exports = [
           allow: [],
           depConstraints: [
             {
+              sourceTag: 'scope:shared',
+              onlyDependOnLibsWithTags: [
+                'scope:shared'
+              ]
+            },
+            {
+              sourceTag: 'scope:checkin',
+              onlyDependOnLibsWithTags: [
+                'scope:checkin',
+                'scope:shared'
+              ]
+            },
+            {
+              sourceTag: 'scope:luggage',
+              onlyDependOnLibsWithTags: [
+                'scope:luggage',
+                'scope:shared'
+              ]
+            },
+            {
+              sourceTag: 'scope:tickets',
+              onlyDependOnLibsWithTags: [
+                'scope:tickets',
+                'scope:shared'
+              ]
+            },
+            {
               sourceTag: 'type:app',
               onlyDependOnLibsWithTags: [
                 'type:feature',
@@ -56,6 +83,14 @@ module.exports = [
                 'type:ui',
                 'type:domain',
                 'type:data',
+                'type:infra',
+                'type:model',
+                'type:util'
+              ]
+            },
+            {
+              sourceTag: 'type:data',
+              onlyDependOnLibsWithTags: [
                 'type:infra',
                 'type:model',
                 'type:util'

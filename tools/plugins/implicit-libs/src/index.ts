@@ -31,12 +31,6 @@ export const createNodesV2: CreateNodesV2 = [
     },
 ];
 
-import * as fs from 'fs';
-
-function log(msg: string) {
-    fs.appendFileSync('c:/temp/log.txt', `[${new Date().toISOString()}] ${msg}\n`);
-}
-
 async function createImplicitLibProjectConfig(
     indexPath: string,
     { workspaceRoot }: { workspaceRoot: string }
