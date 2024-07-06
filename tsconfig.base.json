@@ -15,8 +15,29 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@demo/domain1-ui-lib": ["libs\\domain1\\ui-lib\\index.ts"],
-      "@demo/implicit-libs": ["tools\\plugins\\implicit-libs\\index.ts"]
+      "@demo/checkin-data": ["libs/checkin/data/index.ts"],
+      "@demo/checkin-feature-checkin": [
+        "libs/checkin/feature-checkin/index.ts"
+      ],
+      "@demo/checkin-feature-id-check": [
+        "libs/checkin/feature-id-check/index.ts"
+      ],
+      "@demo/implicit-libs": ["tools/plugins/implicit-libs/index.ts"],
+      "@demo/luggage-data": ["libs/luggage/data/index.ts"],
+      "@demo/luggage-feature-checkin": [
+        "libs/luggage/feature-checkin/index.ts"
+      ],
+      "@demo/luggage-feature-report-loss": [
+        "libs/luggage/feature-report-loss/index.ts"
+      ],
+      "@demo/shared-ui-common": ["libs/shared/ui-common/index.ts"],
+      "@demo/shared-util-auth": ["libs/shared/util-auth/index.ts"],
+      "@demo/tickets-data": ["libs/tickets/data/index.ts"],
+      "@demo/tickets-feature-booking": [
+        "libs/tickets/feature-booking/index.ts"
+      ],
+      "@demo/tickets-feature-cancel": ["libs/tickets/feature-cancel/index.ts"],
+      "@demo/tickets-feature-upgrade": ["libs/tickets/feature-upgrade/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

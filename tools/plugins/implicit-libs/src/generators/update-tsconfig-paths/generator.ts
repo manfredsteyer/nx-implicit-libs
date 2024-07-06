@@ -7,21 +7,23 @@ import {
 } from '@nx/devkit';
 import { join } from 'node:path';
 
+// import { logger } from '@nrwl/devkit';
+
 export async function updateTsconfigPathsGenerator(
   tree: Tree,
-  { graph }: { graph?: Graph } = {}
+  { graph }: { graph?: Graph } = {},
 ) {
+
   graph = graph ?? new GraphImpl();
 
   const projectNodes = await graph.getNodes();
-  console.log('projectNodes', projectNodes);
   const libraries = projectNodes.filter(({ type }) => type === 'lib');
   const npmScope = readJson(tree, 'package.json').name.split('/')[0];
   const paths = libraries.reduce((acc, library) => {
     return {
       ...acc,
       [`${npmScope}/${library.name}`]: [
-        join('.', library.projectRoot, 'index.ts'),
+        join('.', library.projectRoot, 'index.ts').replace(/\\/g, '/'),
       ],
     };
   }, {} as Record<string, string[]>);

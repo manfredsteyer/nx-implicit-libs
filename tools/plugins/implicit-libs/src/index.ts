@@ -6,7 +6,7 @@ import {
 
 import { dirname, join } from 'node:path';
 import { Optional } from 'nx/src/project-graph/plugins';
-import { getProjectInfo, hasFileMatching, hasIndexInParentTree } from './utils';
+import { getProjectInfo, hasIndexInParentTree } from './utils';
 
 export const createNodesV2: CreateNodesV2 = [
     'libs/**/index.ts',

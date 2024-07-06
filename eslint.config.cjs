@@ -43,6 +43,7 @@ module.exports = [
                 'type:feature',
                 'type:ui',
                 'type:domain',
+                'type:data',
                 'type:infra',
                 'type:model',
                 'type:util'
@@ -54,6 +55,7 @@ module.exports = [
                 'type:feature',
                 'type:ui',
                 'type:domain',
+                'type:data',
                 'type:infra',
                 'type:model',
                 'type:util'
@@ -61,7 +63,7 @@ module.exports = [
             },
             {
               sourceTag: 'type:ui',
-              onlyDependOnLibsWithTags: ['type:ui', 'type:model', 'type:util']
+              onlyDependOnLibsWithTags: ['type:ui', 'type:data', 'type:model', 'type:util']
             },
             {
               sourceTag: 'type:domain',

@@ -3,7 +3,6 @@ import { dirname, join } from 'node:path';
 import { globIterate } from 'glob';
 import { logger } from '@nx/devkit';
 
-
 /**
  * Checks if there are `index.ts` files in parent folders.
  * This is useful to exclude folders with `index.ts` which are inside other libs.
@@ -73,8 +72,9 @@ const allowedLibraryTypes = [
   'domain',
   'feature',
   'ui',
-  'utils',
-  'api'
+  'util',
+  'api',
+  'data'
 ];
 
 export async function hasFileMatching(globPattern: string): Promise<boolean> {
