@@ -2,6 +2,7 @@ import {
     CreateNodesResultV2,
     CreateNodesV2,
     ProjectConfiguration,
+    logger
 } from '@nx/devkit';
 
 import { dirname, join } from 'node:path';
@@ -49,12 +50,8 @@ async function createImplicitLibProjectConfig(
 
     const { name, type, scope } = projectInfo;
     const projectName = name;
-    const normProjectRoot = projectRoot.replace(/\\/g, '/')
     // const hasTests = await hasFileMatching(join(normProjectRoot, '**/*.spec.ts'));
 
-    // log('normProjectRoot: ' + normProjectRoot);
-    // log('hasTests:' + hasTests);
-    
     return {
         indexPath,
         projectPath,

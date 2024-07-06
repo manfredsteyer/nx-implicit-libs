@@ -1,5 +1,5 @@
-import {PI as data } from '@demo/tickets-data';
-console.log(data);
+import { TicketsService } from '@demo/tickets-data';
+console.log(TicketsService);
 
 import {PI as ui } from '@demo/shared-ui-common';
 console.log(ui);
