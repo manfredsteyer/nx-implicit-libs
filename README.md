@@ -17,3 +17,20 @@ The underlying idea and implementation was taken with just small changes from [Y
 5. Use the lint target: ``nx lint domain1-feature-demo``.
 6. Add an ``index.spec.ts`` and use the test target: ``nx test domain1-feature-demo``.
 7. Call `nx g @demo/implicit-libs:update-tsconfig-paths` to get path mappings for your implicit libs added to the file `tsconfig.base.json`.
+
+## Disabling Daemon and Cache During Development
+
+
+### Windows
+
+```
+set NX_DAEMON=false
+set NX_CACHE=false
+```
+
+### Linux/Mac
+
+```
+export NX_DAEMON=false
+export NX_CACHE=false
+```
